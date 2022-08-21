@@ -95,17 +95,7 @@ class DetailMobilePage extends StatelessWidget {
                       right: 20.0,
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 20.0),
-                        child: CircleAvatar(
-                          backgroundColor: Color.fromARGB(255, 209, 79, 69),
-                          child: IconButton(
-                            icon: const Icon(
-                              Icons.favorite,
-                              color: Colors.white,
-                            ),
-                            onPressed: (){
-                            },
-                          ),
-                        ),
+                        child: const FavoriteButton()
                       ),
                     )
                   ],
@@ -276,10 +266,11 @@ class _DetailWebPageState extends State<DetailWebPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 const Text(
-                  'Wisata Bandung',
+                  'Plant',
                   style: TextStyle(
-                    fontFamily: 'Staatliches',
+                    fontFamily: 'SFProText',
                     fontSize: 32,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
                 const SizedBox(height: 32),
@@ -332,47 +323,98 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
                                     fontSize: 30.0,
-                                    fontFamily: 'Staatliches',
+                                    fontFamily: 'SFProText',
+                                    fontWeight: FontWeight.bold
                                   ),
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: <Widget>[
-                                      const Icon(Icons.calendar_today),
-                                      const SizedBox(width: 8.0),
-                                      Text(
-                                        widget.plant.kingdom,
-                                        style: informationTextStyle,
-                                      ),
-                                    ],
-                                  ),
-                                  const FavoriteButton(),
-                                ],
-                              ),
+                              const SizedBox(height: 8.0),
                               Row(
                                 children: <Widget>[
-                                  const Icon(Icons.access_time),
-                                  const SizedBox(width: 8.0),
-                                  Text(
-                                    widget.plant.family,
-                                    style: informationTextStyle,
+                                  Padding(
+                                    padding:const EdgeInsets.only(left:10,top:15,right:10),
+                                    child: Text(
+                                      'DANGER',
+                                      style: TextStyle(
+                                        background: Paint()
+                                          ..color = Colors.blue.withOpacity(0.1)
+                                          ..strokeWidth = 20
+                                          ..style = PaintingStyle.stroke,
+                                        color: Colors.blue,
+                                        fontSize: 12.0,
+                                        fontFamily: 'SFProText',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding:const EdgeInsets.only(left:20,top:10,right:20),
+                                    child:
+                                    Text(
+                                      'DECORATION',
+                                      style: TextStyle(
+                                        background: Paint()
+                                          ..color = Colors.blue.withOpacity(0.1)
+                                          ..strokeWidth = 20
+                                          ..style = PaintingStyle.stroke,
+                                        color: Colors.blue,
+                                        fontSize: 12.0,
+                                        fontFamily: 'SFProText',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8.0),
+                              Container(
+                                margin: const EdgeInsets.only(top:20.0,left:16.0,bottom: 8.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(right:10),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            'KINGDOM',
+                                            style: SubTextStyle,
+                                          ),
+                                          const SizedBox(height: 8.0),
+                                          Text(
+                                            widget.plant.kingdom,
+                                            style: InfoTextStyle,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left:10),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            'FAMILY',
+                                            style: SubTextStyle,
+                                          ),
+                                          const SizedBox(height: 8.0),
+                                          Text(
+                                            widget.plant.family,
+                                            style: InfoTextStyle,
+                                          ),
+                                        ],
+                                      )
+                                    ),
+                                    const FavoriteButton(),
+                                  ],
+                                ),
+                              ),
                               Container(
                                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                                 child: Text(
                                   widget.plant.description,
                                   textAlign: TextAlign.justify,
-                                  style: const TextStyle(
-                                    fontSize: 16.0,
-                                    fontFamily: 'Oxygen',
-                                  ),
+                                  style: InfoTextStyle
                                 ),
                               ),
                             ],
@@ -410,16 +452,19 @@ class _FavoriteButtonState extends State<FavoriteButton> {
  
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      icon: Icon(
-        isFavorite ? Icons.favorite : Icons.favorite_border,
-        color: Colors.red,
-      ),
-      onPressed: () {
-        setState(() {
-          isFavorite = !isFavorite;
-        });
-      },
+    return CircleAvatar(
+      backgroundColor: Color.fromARGB(255, 241, 238, 238),
+      child:IconButton(
+        icon: Icon(
+          isFavorite ? Icons.favorite : Icons.favorite_border,
+          color: Colors.red,
+        ), 
+        onPressed: () {
+          setState(() {
+            isFavorite = !isFavorite;
+          });
+        },
+      )
     );
   }
 }

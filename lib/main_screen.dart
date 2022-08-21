@@ -228,6 +228,7 @@ class PlantGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Scrollbar(
           thumbVisibility: true,
@@ -340,9 +341,10 @@ class PlantGrid extends StatelessWidget {
                                 padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 8.0),
                                 child: Container(
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Text(
                                             'KINGDOM',
@@ -355,7 +357,9 @@ class PlantGrid extends StatelessWidget {
                                           ),
                                         ],
                                       ),
+                                      const SizedBox(width: 8.0),
                                       Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Text(
                                             'FAMILY',

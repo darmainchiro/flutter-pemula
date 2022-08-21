@@ -137,7 +137,7 @@ var plantList = [
     description:
         'Lidah buaya (Aloe vera) adalah spesies tumbuhan dengan daun berdaging tebal dari genus Aloe. Tumbuhan ini bersifat menahun, berasal dari Jazirah Arab, dan tanaman liarnya telah menyebar ke kawasan beriklim tropis, semi-tropis, dan kering di berbagai belahan dunia. Tanaman lidah buaya banyak dibudidayakan untuk pertanian, pengobatan, dan tanaman hias, dan dapat juga ditanam di dalam pot.',
     kingdom: 'Plantae',
-    family: 'Xanthorrhoeaceae',
+    family: 'Asphodelaceae',
     imageAsset: 'images/plant7-min.jpg',
     imageUrls: [
       'https://cdn.pixabay.com/photo/2017/09/09/06/54/aloe-vera-plants-2731140_1280.jpg',
