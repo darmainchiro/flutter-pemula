@@ -18,11 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Image(
-              image: AssetImage('images/logo.png'),
-              width: 80,
-              height: 80,
-            ),
             Text(
               "Plant Smart",
               style: TextStyle(
@@ -49,13 +44,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void movingToNextScreen() {
     Timer(
-        Duration(
+        const Duration(
           seconds: 3,
         ), () {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => MainScreen(),
+            builder: (context) => const MainScreen(),
           ));
     });
   }

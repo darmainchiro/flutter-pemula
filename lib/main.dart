@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Pemula',
-      home: SplashScreen(),
+      theme: ThemeData(),
+      home: const SplashScreen(),
     );
   }
 }

@@ -1,20 +1,18 @@
 class Plant {
   String name;
-  String location;
+  String status;
   String description;
-  String openDays;
-  String openTime;
-  String ticketPrice;
+  String kingdom;
+  String family;
   String imageAsset;
   List<String> imageUrls;
  
   Plant({
     required this.name,
-    required this.location,
+    required this.status,
     required this.description,
-    required this.openDays,
-    required this.openTime,
-    required this.ticketPrice,
+    required this.kingdom,
+    required this.family,
     required this.imageAsset,
     required this.imageUrls,
   });
@@ -22,138 +20,129 @@ class Plant {
 
 var plantList = [
   Plant(
-    name: 'Farm House Lembang',
-    location: 'Lembang',
+    name: 'Red Cactus',
+    status: 'Lembang',
     description:
-        'Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto Instagramable.',
-    openDays: 'Open Everyday',
-    openTime: '09:00 - 20:00',
-    ticketPrice: 'Rp 25000',
-    imageAsset: 'images/farm-house.jpg',
+        'Kaktus mini jenis Gymnocalycium ini memiliki bentuk yang menyerupai buah labu dengan tanduk sebagai tempat tumbuhnya bunga. Lucunya, bagian tanduk tempat bunga muncul ini tidak dipenuhi oleh duri. Bunganya bermekaran dengan indah di beberapa sisi dan warnanya sangat cerah.',
+    kingdom: 'Plantae',
+    family: 'Cactaceae',
+    imageAsset: 'images/cactus_red-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-s/0d/7c/59/70/farmhouse-lembang.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/13/f0/22/f6/photo3jpg.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg'
+      'https://thumbs.dreamstime.com/b/red-small-cacti-cactuses-pot-red-cactus-small-cacti-cactuses-pot-114128042.jpg',
+      'https://rare-gallery.com/thumbs/5375209-cactus-minimalist-wallpaper-cacti-red-rock-plant-pot-indoor-plant-potted-plant-decoration-colorful-pebbles-palnt-potted-decor-interior-decor-white-white-space-red-cactus-free-images.jpg',
+      'https://media.istockphoto.com/photos/red-cactus-in-pot-gymnocalycium-mihanovichii-picture-id515711486'
     ],
   ),
   Plant(
-    name: 'Observatorium Bosscha',
-    location: 'Lembang',
+    name: 'Pilea Peperomioides',
+    status: 'Lembang',
     description:
-        'Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor Bamberg, Cassegrain GOTO, dan Teleskop Surya. Refraktor Ganda Zeiss adalah jenis teleskop terbesar untuk meneropong bintang. Benda ini diletakkan pada atap kubah sehingga saat teropong digunakan, atap tersebut harus dibuka. Observatorium Bosscha boleh dikunjungi oleh siapa pun, tanpa tiket. Namun, bagi yang ingin menggunakan teleskop Zeiss, wajib mendaftarkan diri. Untuk instansi atau lembaga pendidikan, diberikan jadwal hari Selasa sampai Jumat. Sementara itu, kunjungan individu dibuka setiap hari Sabtu.',
-    openDays: 'Open Tuesday - Saturday',
-    openTime: '09:00 - 14:30',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'images/bosscha.jpg',
+        'Pilea Peperomioides adalah spesies tanaman berbunga di keluarga jelatang Urticaceae, asli provinsi Yunnan dan Sichuan di Cina selatan. Tanaman dengan daun berbentuk menyerupai koin tersebut dikenal dapat membawa keberuntungan dan kelimpahan bagi pemiliknya.',
+    kingdom: 'Plantae',
+    family: 'Urticaceae',
+    imageAsset: 'images/teratai-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/12/6b/63/0b/bosscha-observatory.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-p/0d/6a/88/9b/photo3jpg.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-o/11/3f/04/39/p-20171111-110220-largejpg.jpg',
+      'https://cdn.pixabay.com/photo/2018/12/02/21/41/pilea-3852265_1280.jpg',
+      'https://asset.kompas.com/crops/T-U2t6vwsQsgAQSWMselExaa1ak=/128x512:1152x1195/750x500/data/photo/2022/03/25/623d71237f698.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Pilea_peperomia_and_pups.jpg/440px-Pilea_peperomia_and_pups.jpg',
     ],
   ),
   Plant(
-    name: 'Jalan Asia Afrika',
-    location: 'Kota Bandung',
+    name: 'Echinofossulocactus',
+    status: 'Kota Bandung',
     description:
-        'Jalan Asia Afrika di Bandung memiliki kaitan yang sangat erat dengan pendirian kota Kembang ini. Karena pada saat itu, Gubernur Jenderal Herman Willem Deaendels dari Belanda menancapkan tongkatnya saat memerintahkan pendirian kota ini, yang kemudian diabadikan menjadi tugu Bandung Nol Kilometer.',
-    openDays: 'Open Everyday',
-    openTime: '24 hours',
-    ticketPrice: 'Free',
-    imageAsset: 'images/jalan-asia-afrika.jpg',
+        'Kaktus mini yang satu ini terlihat unik karena batangnya yang berwarna hijau tua dikelilingi dengan duri yang cukup besar. Kaktus mini Echinofossulocactus ini termasuk kaktus yang pertumbuhannya lambat. Ia membutuhkan waktu sekitar 3 tahun untuk mengeluarkan bunga. Bunganya sendiri ada yang berwarna putih, merah, dan kuning.',
+    kingdom: 'Plantae',
+    family: 'Cactaceae',
+    imageAsset: 'images/cactus_blare-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/0d/c2/e7/e6/quotes-kota-bandung.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/17/f4/44/01/jalan-asia-afrika.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-s/0a/ef/36/e2/jalan-asia-afrika.jpg',
+      'https://media.istockphoto.com/id/1400451235/id/foto/echinofossulocactus-phyllacanthus-atau-stenocactus-dan-dijuluki-kaktus-otak.webp?s=612x612&w=is&k=20&c=KAeUof8q9GMTwZvsBbLF_fLZKnBnAMmjCUyJnS0OS98=',
+      'https://media.istockphoto.com/id/138162964/id/foto/kaktus-mekar.webp?s=612x612&w=is&k=20&c=6LEXvFUfeHvsXqT_cvMBsB3A5K45zBgPzYc-t3UqIgo=',
+      'https://media.istockphoto.com/id/911294730/id/foto/kaktus-mekar-echinofossulocactus.webp?s=612x612&w=is&k=20&c=SeqaB5C4OLejVPeC6qkTL65UKMmuWNIJA-YRrdOXHAI=',
     ],
   ),
   Plant(
-    name: 'Stone Garden',
-    location: 'Padalarang',
+    name: 'Crassula ovata',
+    status: 'Padalarang',
     description:
-        'Stone Garden atau Taman Batu di Padalarang – Bandung ini adalah nama secara harafiah untuk apa yang akan kita lihat jika berada di sana. Hamparan batu yang artistik membuat kita merasa tidak sedang berada di Bandung, apalagi di Padalarang. Hamparan batu yang dimaksud bukan terhampar begitu saja di atas tanah luas yang menjadi permukaannya. Batu-batu besar yang ukuran pastinya bervariasi tersusun seperti memiliki suatu formasi matematis.',
-    openDays: 'Open Everyday',
-    openTime: '06:00 - 17:00',
-    ticketPrice: 'Rp 3000',
-    imageAsset: 'images/stone-garden.jpg',
+        'Crassula ovata, umumnya dikenal sebagai tanaman giok, tanaman beruntung, tanaman uang atau pohon uang, adalah tanaman sukulen dengan bunga kecil berwarna merah muda atau putih yang berasal dari provinsi KwaZulu-Natal dan Tanjung Timur di Afrika Selatan, dan Mozambik; itu umum sebagai tanaman hias di seluruh dunia.',
+    kingdom: 'Plantae',
+    family: 'Crassulaceae',
+    imageAsset: 'images/crasula-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/15/01/d7/4b/p-20180510-153310-01.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/15/68/00/32/stone-garden-citatah.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-o/0d/a2/cb/05/stone-garden-citatah.jpg',
+      'https://cdn.pixabay.com/photo/2013/07/26/16/25/money-tree-167793_1280.jpg',
+      'https://cdn.pixabay.com/photo/2016/09/15/12/27/jade-plant-1671461_1280.jpg',
+      'https://cdn.pixabay.com/photo/2019/08/28/10/32/jade-plant-4436411_1280.jpg',
     ],
   ),
   Plant(
-    name: 'Taman Film Pasopati',
-    location: 'Kota Bandung',
+    name: 'Conifer',
+    status: 'Kota Bandung',
     description:
-        'Menjadi salah satu tempat wisata di Bandung yang favorit, tentu Taman Film ini memiliki fasilitas cukup memadai. Pemberian fasilitas ini memiliki harapan para pengunjung akan merasa nyaman dan tak segan2 untuk kembali berkunjung terus menerus kesini. Beberapa fasilitas taman yang bisa kamu nikmati diantaranya seperti layar videotron besar berukuran 4×8 untuk memutar berbagai macam pilihan film seperti Film Indonesia, Bollywood, Korea, ataupun Indie Bandung.',
-    openDays: 'Open Everyday',
-    openTime: '24 hours',
-    ticketPrice: 'Free',
-    imageAsset: 'images/taman-film.jpg',
+        'Tetumbuhan runjung atau konifer (Pinophyta atau Coniferae) adalah sekelompok tumbuhan berbiji terbuka (Gymnospermae) yang memiliki runjung ("cone") sebagai organ pembawa biji. Kelompok ini sekarang ditempatkan sebagai divisio tersendiri setelah diketahui bahwa pemisahan Gymnospermae dan Angiospermae secara kladistik adalah polifiletik.',
+    kingdom: 'Plantae',
+    family: 'Cupressaceae',
+    imageAsset: 'images/plant3-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/08/8b/87/50/bandung-movie-park.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-o/17/67/d5/53/img-20190505-114509-largejpg.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/09/73/33/05/taman-film-pasopati.jpg',
+      'https://cdn.pixabay.com/photo/2014/09/27/13/36/pine-463469_1280.jpg',
+      'https://cdn.pixabay.com/photo/2022/07/27/14/46/tree-7348069_1280.jpg',
+      'https://cdn.pixabay.com/photo/2020/01/19/12/56/conifer-4777693_1280.jpg',
     ],
   ),
   Plant(
-    name: 'Museum Geologi',
-    location: 'Kota Bandung',
+    name: 'Haworthia',
+    status: 'Kota Bandung',
     description:
-        'Museum Geologi didirikan pada tanggal 16 Mei 1929. Museum ini telah direnovasi dengan dana bantuan dari JICA (Japan International Cooperation Agency). Setelah mengalami renovasi, Museum Geologi dibuka kembali dan diresmikan oleh Wakil Presiden RI, Megawati Soekarnoputri pada tanggal 23 Agustus 2000. Sebagai salah satu monumen bersejarah, museum berada di bawah perlindungan pemerintah dan merupakan peninggalan nasional. Dalam Museum ini, tersimpan dan dikelola materi-materi geologi yang berlimpah, seperti fosil, batuan, mineral. Kesemuanya itu dikumpulkan selama kerja lapangan di Indonesia sejak 1850.',
-    openDays: 'Open Saturday - Thursday',
-    openTime: '09:00 - 15:30',
-    ticketPrice: 'Rp 3000',
-    imageAsset: 'images/museum-geologi.jpg',
+        'Haworthia adalah genus besar tanaman sukulen kecil yang endemik di Afrika Selatan . Seperti gaharu, mereka adalah anggota dari subfamili Asphodeloideae dan mereka umumnya menyerupai gaharu mini, kecuali pada bunganya, yang berbeda dalam penampilan. Mereka adalah tanaman kebun dan wadah yang populer.',
+    kingdom: 'Plantae',
+    family: 'Asphodelaceae',
+    imageAsset: 'images/plant4-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-w/19/1c/8e/f7/geology-museum.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-o/11/a7/35/b7/geology-museum.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-s/1a/55/e0/dc/geology-museum.jpg',
+      'https://imgcdn.floweraura.com/succulent-haworthia-plant-9870767pl-A_0.jpg',
+      'https://c8.alamy.com/comp/2HJ6BX1/haworthia-in-a-pot-on-a-yellow-background-a-house-plant-a-green-home-a-succulent-is-a-symbol-of-harmony-copy-space-care-of-indoor-plants-2HJ6BX1.jpg',
+      'https://5.imimg.com/data5/PT/HM/CG/SELLER-10833874/haworthia-fasciata-succulent-live-plant-in-white-ripple-ceramic-pot-1000x1000.jpg',
     ],
   ),
   Plant(
-    name: 'Floating Market',
-    location: 'Lembang',
+    name: 'Peperomia',
+    status: 'Lembang',
     description:
-        'Tempat wisata ini sepertinya memang ditujukan untuk wisata keluarga di Bandung. Di sini kita bisa menikmati suasana kawasan yang tertata rapi dan alami. Pada awalnya, floating market Lembang tidak begitu luas. Tapi sekarang sudah ekspansi dan memiliki banyak objek menarik baru. Nama floating market ini sepertinya merujuk pada stand tempat jualan makanan yang berada dalam perahu.',
-    openDays: 'Open Everyday',
-    openTime: '09:00 - 17:00',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'images/floating-market.png',
+        'Peperomia (Peperomia vershaffeltii) adalah tanaman yang berasal dari Brazil. Tanaman ini tumbuh di dataran rendah, tempat teduh dan agak lembap. Dapat diperbanyak dengan cara stek daun atau biji. Digunakan sebagai tanaman hias dalam bentuk pot yang diletakkan di dalam rumah.',
+    kingdom: 'Plantae',
+    family: 'Piperaceae',
+    imageAsset: 'images/peperomia-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/17/f9/ff/f8/floating-market-bandung.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-p/1a/86/d3/cd/20200103-125059-largejpg.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-p/19/ce/b4/9b/img20181224120857-largejpg.jpg',
+      'https://cdn.pixabay.com/photo/2016/07/27/20/17/peperomia-1546175_1280.jpg',
+      'https://cdn.pixabay.com/photo/2017/05/24/20/21/peperomia-flower-2341486_1280.jpg',
+      'https://cdn.pixabay.com/photo/2014/07/21/19/32/peperomia-pellucida-398858_1280.jpg',
     ],
   ),
   Plant(
-    name: 'Kawah Putih',
-    location: 'Ciwidey',
+    name: 'Lavender Flower',
+    status: 'Ciwidey',
     description:
-        'Kawah Putih adalah tempat wisata di Bandung yang paling terkenal. Berlokasi di Ciwidey, Jawa Barat, kurang lebih sekitar 50 KM arah selatan kota Bandung, Kawah Putih adalah sebuah danau yang terbentuk akibat dari letusan Gunung Patuha. Sesuai dengan namanya, tanah yang ada di kawasan ini berwarna putih akibat dari pencampuran unsur belerang.',
-    openDays: 'Open Everyday',
-    openTime: '07:00 - 17:00',
-    ticketPrice: 'Rp 15000',
-    imageAsset: 'images/kawah-putih.jpg',
+        'Lavender atau lavendel atau Lavandula adalah genus tumbuhan berbunga dalam suku Lamiaceae yang tersusun atas 25-30 spesies. Asal tumbuhan ini adalah dari wilayah selatan Laut Tengah sampai Afrika tropis dan ke timur sampai India—Dunia Lama.',
+    kingdom: 'Plantae',
+    family: 'Lamiaceae',
+    imageAsset: 'images/lavender-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/0b/6e/7c/ce/rocks-sticking-out-of.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-p/0b/35/30/14/white-crater.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-o/0a/8b/9a/79/2945-t00572-www-initempatwisat.jpg',
+      'https://cdn.pixabay.com/photo/2018/05/01/18/30/lilac-3366467_1280.jpg',
+      'https://cdn.pixabay.com/photo/2016/07/23/23/02/lavenders-1537694_1280.jpg',
+      'https://cdn.pixabay.com/photo/2016/06/23/15/10/ceramic-1475534_1280.jpg',
     ],
   ),
   Plant(
-    name: 'Ranca Upas',
-    location: 'Ciwidey',
+    name: 'Aloe Vera',
+    status: 'Ciwidey',
     description:
-        'Ranca Upas Ciwidey adalah kawasan bumi perkemahan di bawah pengelolaan perhutani. Tempat ini berada di kawasan wisata Bandung Selatan, satu lokasi dengan kawah putih, kolam Cimanggu dan situ Patenggang. Banyak hal yang bisa dilakukan di kawasan wisata ini, seperti berkemah, berinteraksi dengan rusa, sampai bermain di water park dan mandi air panas.',
-    openDays: 'Open Everyday',
-    openTime: '24 hours',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'images/ranca-upas.jpg',
+        'Lidah buaya (Aloe vera) adalah spesies tumbuhan dengan daun berdaging tebal dari genus Aloe. Tumbuhan ini bersifat menahun, berasal dari Jazirah Arab, dan tanaman liarnya telah menyebar ke kawasan beriklim tropis, semi-tropis, dan kering di berbagai belahan dunia. Tanaman lidah buaya banyak dibudidayakan untuk pertanian, pengobatan, dan tanaman hias, dan dapat juga ditanam di dalam pot.',
+    kingdom: 'Plantae',
+    family: 'Xanthorrhoeaceae',
+    imageAsset: 'images/plant7-min.jpg',
     imageUrls: [
-      'https://media-cdn.tripadvisor.com/media/photo-o/1a/e0/7f/9c/kampung-cai-ranca-upas.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/13/ee/2f/87/ranca-upas.jpg',
-      'https://media-cdn.tripadvisor.com/media/photo-w/13/ee/27/0a/ranca-upas.jpg',
+      'https://cdn.pixabay.com/photo/2017/09/09/06/54/aloe-vera-plants-2731140_1280.jpg',
+      'https://cdn.pixabay.com/photo/2020/05/11/10/44/aloe-vera-5157522_1280.jpg',
+      'https://cdn.pixabay.com/photo/2020/09/06/07/19/aloe-5548208_1280.jpg',
     ],
   ),
 ];
