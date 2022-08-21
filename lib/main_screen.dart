@@ -308,6 +308,7 @@ class PlantGrid extends StatelessWidget {
                     crossAxisCount: gridCount,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
+                    shrinkWrap: true,
                     children: plantList.map((plant) {
                       return InkWell(
                         onTap: () {
@@ -330,47 +331,51 @@ class PlantGrid extends StatelessWidget {
                                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                                 child: Text(
                                   plant.name,
+                                  maxLines: 2,
                                   style: const TextStyle(
                                     fontSize: 17.0,
                                     fontFamily: 'SFProText',
-                                    fontWeight: FontWeight.bold
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            'KINGDOM',
-                                            style: SubTextStyle,
-                                          ),
-                                          const SizedBox(height: 8.0),
-                                          Text(
-                                            plant.kingdom,
-                                            style: InfoTextStyle
-                                          ),
-                                        ],
+                                      Flexible(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              'KINGDOM',
+                                              style: SubTextStyle,
+                                            ),
+                                            const SizedBox(height: 8.0),
+                                            Text(
+                                              plant.kingdom,
+                                              style: InfoTextStyle
+                                            ),
+                                          ],
+                                        )
                                       ),
                                       const SizedBox(width: 8.0),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            'FAMILY',
-                                            style: SubTextStyle,
-                                          ),
-                                          const SizedBox(height: 8.0),
-                                          Text(
-                                            plant.family,
-                                            style: InfoTextStyle,
-                                          ),
-                                        ],
+                                      Flexible(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              'FAMILY',
+                                              style: SubTextStyle,
+                                            ),
+                                            const SizedBox(height: 8.0),
+                                            Text(
+                                              plant.family,
+                                              style: InfoTextStyle,
+                                            ),
+                                          ],
+                                        )
                                       )
                                     ],
                                   ),

@@ -109,7 +109,7 @@ class DetailMobilePage extends StatelessWidget {
                     Padding(
                       padding:const EdgeInsets.only(left:10,top:10,right:10),
                       child: Text(
-                        'DANGER',
+                        'NATURE',
                         style: TextStyle(
                           background: Paint()
                             ..color = Colors.blue.withOpacity(0.1)

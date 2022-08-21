@@ -35,7 +35,7 @@ class _LoginMobileState extends State<LoginMobilePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               const Text(
-                'Welcome back',
+                'Plant',
                 style: TextStyle(
                   fontSize: 17,
                   fontFamily: 'Montserrat',
@@ -151,7 +151,7 @@ class _LoginMobileState extends State<LoginMobilePage> {
                   ),
                 ),
                 child: const Text(
-                  'Login now',
+                  'Login',
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'SFProText',
