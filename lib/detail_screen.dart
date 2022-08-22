@@ -1,22 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pemula/model/plant.dart';
 
 var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 
-var SubTextStyle = const TextStyle(
-                                    fontSize: 14.0,
-                                    fontFamily: 'SFProText',
-                                    fontWeight: FontWeight.bold,
-                                  );
+var subTextStyle = const TextStyle(
+  fontSize: 14.0,
+  fontFamily: 'SFProText',
+  fontWeight: FontWeight.bold,
+);
 
-var InfoTextStyle = const TextStyle(
-                                    fontSize: 14.0,
-                                    fontFamily: 'SFProText',
-                                    fontWeight: FontWeight.normal
-                                  );
+var infoTextStyle = const TextStyle(
+    fontSize: 14.0, fontFamily: 'SFProText', fontWeight: FontWeight.normal);
 
-class DetailScreen extends StatelessWidget{
+class DetailScreen extends StatelessWidget {
   final Plant plant;
 
   const DetailScreen({Key? key, required this.plant}) : super(key: key);
@@ -24,14 +20,13 @@ class DetailScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        if(constraints.maxWidth > 800){
-          return DetailWebPage(plant: plant);
-        } else {
-          return DetailMobilePage(plant: plant);
-        }
+        builder: (BuildContext context, BoxConstraints constraints) {
+      if (constraints.maxWidth > 800) {
+        return DetailWebPage(plant: plant);
+      } else {
+        return DetailMobilePage(plant: plant);
       }
-    );
+    });
   }
 }
 
@@ -44,8 +39,8 @@ class DetailMobilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child:SingleChildScrollView(
-          child:Column(
+        child: SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
@@ -55,12 +50,12 @@ class DetailMobilePage extends StatelessWidget {
                     Container(
                       width: double.infinity,
                       height: 450.0,
-                      child: Image.asset(plant.imageAsset,fit:BoxFit.fill),
+                      child: Image.asset(plant.imageAsset, fit: BoxFit.fill),
                     ),
                     Positioned(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
+                        child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CircleAvatar(
@@ -70,7 +65,7 @@ class DetailMobilePage extends StatelessWidget {
                                   Icons.arrow_back,
                                   color: Colors.white,
                                 ),
-                                onPressed: (){
+                                onPressed: () {
                                   Navigator.pop(context);
                                 },
                               ),
@@ -82,21 +77,17 @@ class DetailMobilePage extends StatelessWidget {
                                   Icons.more_vert,
                                   color: Colors.white,
                                 ),
-                                onPressed: (){
-                                },
+                                onPressed: () {},
                               ),
                             ),
-                          ]
-                        ),
-                      )
-                    ),
+                          ]),
+                    )),
                     Positioned(
                       top: 430.0,
                       right: 20.0,
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
-                        child: const FavoriteButton()
-                      ),
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child: const FavoriteButton()),
                     )
                   ],
                 ),
@@ -107,7 +98,8 @@ class DetailMobilePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding:const EdgeInsets.only(left:10,top:10,right:10),
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 10, right: 10),
                       child: Text(
                         'NATURE',
                         style: TextStyle(
@@ -123,9 +115,9 @@ class DetailMobilePage extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding:const EdgeInsets.only(left:20,top:10,right:20),
-                      child:
-                      Text(
+                      padding:
+                          const EdgeInsets.only(left: 20, top: 10, right: 20),
+                      child: Text(
                         'DECORATION',
                         style: TextStyle(
                           background: Paint()
@@ -143,81 +135,78 @@ class DetailMobilePage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.all(16.0),
-                child: Text(
-                  plant.name,
-                  textAlign: TextAlign.start,
-                  style: const TextStyle(
-                    fontSize: 27.0,
-                    fontFamily: 'SFProText',
-                    fontWeight: FontWeight.bold
-                  ),
-                )
-              ),
+                  margin: const EdgeInsets.all(16.0),
+                  child: Text(
+                    plant.name,
+                    textAlign: TextAlign.start,
+                    style: const TextStyle(
+                        fontSize: 27.0,
+                        fontFamily: 'SFProText',
+                        fontWeight: FontWeight.bold),
+                  )),
               Container(
-                margin: const EdgeInsets.only(top:10.0,left:16.0,bottom: 16.0),
+                margin:
+                    const EdgeInsets.only(top: 10.0, left: 16.0, bottom: 16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(right:10),
+                      padding: const EdgeInsets.only(right: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
                             'KINGDOM',
-                            style: SubTextStyle,
+                            style: subTextStyle,
                           ),
                           const SizedBox(height: 8.0),
                           Text(
                             plant.kingdom,
-                            style: InfoTextStyle,
+                            style: infoTextStyle,
                           ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left:10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'FAMILY',
-                            style: SubTextStyle,
-                          ),
-                          const SizedBox(height: 8.0),
-                          Text(
-                            plant.family,
-                            style: InfoTextStyle,
-                          ),
-                        ],
-                      )
-                    ),
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'FAMILY',
+                              style: subTextStyle,
+                            ),
+                            const SizedBox(height: 8.0),
+                            Text(
+                              plant.family,
+                              style: infoTextStyle,
+                            ),
+                          ],
+                        )),
                   ],
                 ),
               ),
               Container(
                 margin: const EdgeInsets.all(16.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'DESCRIPTION',
-                      style: SubTextStyle,
-                    ),
-                    const SizedBox(height: 8.0),
-                    Text(
-                      plant.description,
-                      style: InfoTextStyle,
-                    ),
-                  ] 
-                ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'DESCRIPTION',
+                        style: subTextStyle,
+                      ),
+                      const SizedBox(height: 8.0),
+                      Text(
+                        plant.description,
+                        style: infoTextStyle,
+                      ),
+                    ]),
               ),
               Container(
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: plant.imageUrls.map((url){
+                  children: plant.imageUrls.map((url) {
                     return Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: ClipRRect(
@@ -243,7 +232,6 @@ class DetailWebPage extends StatefulWidget {
 
   @override
   _DetailWebPageState createState() => _DetailWebPageState();
-  
 }
 
 class _DetailWebPageState extends State<DetailWebPage> {
@@ -268,10 +256,9 @@ class _DetailWebPageState extends State<DetailWebPage> {
                 const Text(
                   'Plant',
                   style: TextStyle(
-                    fontFamily: 'SFProText',
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold
-                  ),
+                      fontFamily: 'SFProText',
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 32),
                 Row(
@@ -322,17 +309,17 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                   widget.plant.name,
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    fontSize: 30.0,
-                                    fontFamily: 'SFProText',
-                                    fontWeight: FontWeight.bold
-                                  ),
+                                      fontSize: 30.0,
+                                      fontFamily: 'SFProText',
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                               const SizedBox(height: 8.0),
                               Row(
                                 children: <Widget>[
                                   Padding(
-                                    padding:const EdgeInsets.only(left:10,top:15,right:10),
+                                    padding: const EdgeInsets.only(
+                                        left: 10, top: 15, right: 10),
                                     child: Text(
                                       'DANGER',
                                       style: TextStyle(
@@ -348,9 +335,9 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:const EdgeInsets.only(left:20,top:10,right:20),
-                                    child:
-                                    Text(
+                                    padding: const EdgeInsets.only(
+                                        left: 20, top: 10, right: 20),
+                                    child: Text(
                                       'DECORATION',
                                       style: TextStyle(
                                         background: Paint()
@@ -367,55 +354,58 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                 ],
                               ),
                               Container(
-                                margin: const EdgeInsets.only(top:20.0,left:16.0,bottom: 8.0),
+                                margin: const EdgeInsets.only(
+                                    top: 20.0, left: 16.0, bottom: 8.0),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Padding(
-                                      padding: const EdgeInsets.only(right:10),
+                                      padding: const EdgeInsets.only(right: 10),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Text(
                                             'KINGDOM',
-                                            style: SubTextStyle,
+                                            style: subTextStyle,
                                           ),
                                           const SizedBox(height: 8.0),
                                           Text(
                                             widget.plant.kingdom,
-                                            style: InfoTextStyle,
+                                            style: infoTextStyle,
                                           ),
                                         ],
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(left:10),
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            'FAMILY',
-                                            style: SubTextStyle,
-                                          ),
-                                          const SizedBox(height: 8.0),
-                                          Text(
-                                            widget.plant.family,
-                                            style: InfoTextStyle,
-                                          ),
-                                        ],
-                                      )
-                                    ),
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              'FAMILY',
+                                              style: subTextStyle,
+                                            ),
+                                            const SizedBox(height: 8.0),
+                                            Text(
+                                              widget.plant.family,
+                                              style: infoTextStyle,
+                                            ),
+                                          ],
+                                        )),
                                     const FavoriteButton(),
                                   ],
                                 ),
                               ),
                               Container(
-                                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                                child: Text(
-                                  widget.plant.description,
-                                  textAlign: TextAlign.justify,
-                                  style: InfoTextStyle
-                                ),
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(widget.plant.description,
+                                    textAlign: TextAlign.justify,
+                                    style: infoTextStyle),
                               ),
                             ],
                           ),
@@ -445,26 +435,24 @@ class FavoriteButton extends StatefulWidget {
   @override
   _FavoriteButtonState createState() => _FavoriteButtonState();
 }
- 
- 
+
 class _FavoriteButtonState extends State<FavoriteButton> {
-  bool isFavorite = false;
- 
+  bool _isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: Color.fromARGB(255, 241, 238, 238),
-      child:IconButton(
-        icon: Icon(
-          isFavorite ? Icons.favorite : Icons.favorite_border,
-          color: Colors.red,
-        ), 
-        onPressed: () {
-          setState(() {
-            isFavorite = !isFavorite;
-          });
-        },
-      )
-    );
+        backgroundColor: Color.fromARGB(255, 241, 238, 238),
+        child: IconButton(
+          icon: Icon(
+            _isFavorite ? Icons.favorite : Icons.favorite_border,
+            color: Colors.red,
+          ),
+          onPressed: () {
+            setState(() {
+              _isFavorite = !_isFavorite;
+            });
+          },
+        ));
   }
 }

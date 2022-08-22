@@ -112,7 +112,8 @@ class _LoginMobileState extends State<LoginMobilePage> {
                       SizedBox(
                         height: 24,
                         width: 24,
-                        child: Checkbox(value: _isChecked, onChanged: onChanged),
+                        child:
+                            Checkbox(value: _isChecked, onChanged: onChanged),
                       ),
                       const SizedBox(width: 8),
                       const Text(
@@ -131,7 +132,7 @@ class _LoginMobileState extends State<LoginMobilePage> {
                     style: TextStyle(
                       fontSize: 14,
                       fontFamily: 'SFProText',
-                      color:  Color.fromARGB(255, 0, 84, 152),
+                      color: Color.fromARGB(255, 0, 84, 152),
                     ),
                   ),
                 ],

@@ -6,7 +6,7 @@ class Plant {
   String family;
   String imageAsset;
   List<String> imageUrls;
- 
+
   Plant({
     required this.name,
     required this.status,
